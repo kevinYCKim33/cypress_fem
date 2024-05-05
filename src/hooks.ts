@@ -8,6 +8,8 @@ export async function handle({ request, resolve }) {
   return await resolve(request);
 }
 
+// test
+
 export function getSession({ locals }) {
   return {
     user: locals.user && {
