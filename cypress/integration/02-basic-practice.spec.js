@@ -118,7 +118,7 @@ describe('Basic Practice', () => {
     });
   });
 
-  xdescribe('Mark all as unpacked', () => {
+  describe('Mark all as unpacked', () => {
     it('should empty out the "Packed" list', () => {
       cy.get('[data-test="mark-all-as-unpacked"]').click();
       cy.get('[data-test="items-packed"] li').should('not.exist');
