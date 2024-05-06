@@ -19,6 +19,13 @@ describe('Aliases', () => {
   it('should hold onto an alias', () => {
     cy.get('@unpackedItems').find('label').first().as('firstItem'); // alias on alias!
     // had a11y set up where clicking on label checks off the checkbox
+
+    // invoke aha moment
+    // const getName = () => {
+    //  return 'Jane Lane'
+    // }
+    // cy.wrap({ name: getName }).invoke('name').should('eq', 'Jane Lane'); // true
+
     cy.get('@firstItem').invoke('text').as('text'); // invoke??
     // he didn't really go over invoke...
     // cy.get('@firstItem').find('input[type="checkbox"]').click();
